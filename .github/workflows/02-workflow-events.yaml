@@ -1,0 +1,19 @@
+name: "02 - Eventos"
+on:
+  push:
+  repository_dispatch:
+  pull_request:
+  schedule:
+    # Ejecutar cada 5 minutos
+    - cron: '*/5 * * * *'
+  workflow_dispatch:
+permissions:
+  checks: write
+  actions: read
+  contents: read
+jobs:
+  Trabajos:
+    runs-on: ubuntu-latest
+    steps:
+    - name: 'ShowTrigger'
+      run: echo "Nombre de evento:${{ github.event_name }}"
