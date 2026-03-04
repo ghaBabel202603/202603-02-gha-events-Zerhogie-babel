@@ -3,9 +3,9 @@ on:
   push:
   repository_dispatch:
   pull_request:
-  schedule:
-    # Ejecutar cada 2 horas
-    - cron: '0 */2 * * *'
+  #schedule:
+    # Ejecutar cada 6 horas
+    #- cron: '0 */6 * * *'
   workflow_dispatch:
 permissions:
   checks: write
